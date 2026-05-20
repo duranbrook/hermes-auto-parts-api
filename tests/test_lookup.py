@@ -16,7 +16,7 @@ def test_lookup_with_mock_db_returns_part():
         })
     assert resp.status_code == 200
     body = resp.json()
-    assert "part_number" in body
+    assert body["part_number"] is not None
     assert body["source"] == "db"
     assert body["vehicle"]["make"] == "Honda"
 

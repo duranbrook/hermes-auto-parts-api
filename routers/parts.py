@@ -13,10 +13,10 @@ class LookupRequest(BaseModel):
 
 
 class LookupResponse(BaseModel):
-    part_number: Optional[str]
-    part_name: Optional[str]
-    category: Optional[str]
-    confidence: Optional[float]
+    part_number: Optional[str] = None
+    part_name: Optional[str] = None
+    category: Optional[str] = None
+    confidence: Optional[float] = None
     vehicle: dict
     source: str  # "db" | "not_found"
 
